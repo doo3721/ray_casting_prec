@@ -1,0 +1,14 @@
+{
+	"files.associations": {
+		"ray_casting.h": "c",
+		"locale": "c",
+		"ostream": "c"
+	},
+	"makefile.launchConfigurations": [
+		{
+			"cwd": "/Users/doohkim/Desktop/ray_casting_prec",
+			"binaryPath": "/Users/doohkim/Desktop/ray_casting_prec/cub3d",
+			"binaryArgs": ["example/test.cub"]
+		}
+	]
+}
