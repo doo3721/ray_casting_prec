@@ -6,7 +6,7 @@
 /*   By: doohkim <doohkim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 16:16:20 by doohkim           #+#    #+#             */
-/*   Updated: 2023/03/30 16:59:15 by doohkim          ###   ########.fr       */
+/*   Updated: 2023/03/30 17:48:59 by doohkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -244,6 +244,12 @@ void	draw_scene(t_game_struct *g_obj)
 			color[1] = g_obj->tex_set[tex_num].img_data[tex_x * 4 + g_obj->tex_set[tex_num].size_line * tex_y + 1];
 			color[2] = g_obj->tex_set[tex_num].img_data[tex_x * 4 + g_obj->tex_set[tex_num].size_line * tex_y + 2];
 			color[3] = g_obj->tex_set[tex_num].img_data[tex_x * 4 + g_obj->tex_set[tex_num].size_line * tex_y + 3];
+			if (side == 1)
+			{
+				color[0] = (char)((unsigned char)color[0] / 2);
+				color[1] = (char)((unsigned char)color[1] / 2);
+				color[2] = (char)((unsigned char)color[2] / 2);
+			}
 			idx = x * 4 +g_obj->img_set->size_line * y;
 			put_pixel(g_obj, idx, color);
 			y++;
